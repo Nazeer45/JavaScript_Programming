@@ -45,3 +45,27 @@ console.log(typeof myFunction); // function
 console.log(typeof hugeNumber); // bigint
 console.log(typeof id); // symbol
 console.log(typeof Symbol); // function
+
+
+
+
+// ++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-primitive)
+
+// Examples of primitive data types
+let myname="Nazeer"
+let anotherName=myname
+anotherName="Shaik"
+// console.log(myname); // Nazeer
+// console.log(anotherName); // Shaik
+
+// Examples of non-primitive data types
+const obj1={
+    name:"Nazeer"
+}
+const obj2=obj1
+obj2.name="Shaik"
+// console.log(obj1); // Shaik
+// console.log(obj2); // Shaik
+
