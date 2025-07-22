@@ -59,4 +59,27 @@ const users = [
 
 console.log(Object.entries(tinderUser)); // [ [ 'id', '123abc' ], [ 'name', 'Nazeer' ], [ 'isLoggedIn', false ] ]
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn")); // true - checks if the object has the property
+// console.log(tinderUser.hasOwnProperty("isLoggedIn")); // true - checks if the object has the property
+
+const course = {
+    courseName : "JavaScript",
+    price : "999",
+    courseInstructor : "Nazeer"
+}
+
+const {courseInstructor: instructor} = course // destructuring 
+// console.log(courseInstructor); // Nazeer
+console.log(instructor); // Nazeer
+
+// JSON
+// {
+//     "courseName": "JavaScript",
+//     "price": "999",
+//     "courseInstructor": "Nazeer"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
