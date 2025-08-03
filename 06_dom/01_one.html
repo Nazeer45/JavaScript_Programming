@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning on Chai aur Code <span style="display: none;">by Nazeer Shaik</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">Item 1</li>
+            <li class="list-item">Item 2</li>
+            <li class="list-item">Item 3</li>
+            <li class="list-item">Item 4</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- In Browser Console -->
+<!-- 
+document.getElementById("title") // <h1 id="title" class="heading">DOM learning on Chai aur Code</h1>  
+
+document.getElementsById("title").id // 'title'
+
+document.getElementsByClass // returns 'undefined' as javascript doesnt support class instead it supports classname
+
+document.getElementsByClassName // 'heading'
+
+document.getElementsById('title').getAttribute('id') // 'title'
+
+document.getElementsById('title').getAttribute('class') // 'heading'
+
+document.getElementsById('title').setAttribute('class','test') // it will overwrite the class attribute to test
+
+const tile = document.getElementsById('title')
+title.style.backgroundColor = 'yellow'
+
+title.innerText = "DOM learning on Chai aur Code" // gets only visible text
+
+title.textContent = "DOM learning on Chai aur Code by Nazeer Shaik" // gets all the text even hidden
+
+title.innerHTML = "DOM learning on Chai aur Code <span style='display: none;'>by Nazeer Shaik</span>" // gets raw html
+
+document.querySelector('h2') // returns only first h2
+
+document.querySelectorAll('h2') // returns all h2
+
+document.querySelector('#title') // using id
+
+document.querySelector('.heading') // using class
+
+document.querySelector('input[type="password"]') // using input type
+
+const tempClassList = document.getElementsByClassName('list-item') // returns HTMLCollection, so direct manipulation is not possible, we need to convert it to array
+
+const myConvertedArray = Array.from(tempClassList) // converting HTMLCollection to array
+
+myConvertedArray.forEach((item) => {
+    item.style.color = 'orange'
+})
+
+const allH2 = document.querySelectorAll('h2') // returns NodeList, forEach is possible, but other direct manipulation not possible, we need to convert it to array
+
+
+-->
