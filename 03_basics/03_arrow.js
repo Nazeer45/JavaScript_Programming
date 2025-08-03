@@ -27,15 +27,15 @@ const user = {
 // }
 // chai1()
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
+const addTwo = (num1, num2) => {
+    return num1 + num2
+}
 
 // implicit return
 // const addTwo = (num1, num2) => num1 + num2 // one way of writing
 // const addTwo = (num1, num2) => (num1 + num2) // another way of writing - if parentheses are used then return is implicit
 // const addTwo = (num1, num2) => {return (num1 + num2)} // another way of writing - if curly braces are used then return needs to be explicitly written
 
-const addTwo = (num1, num2) => ({username: "Nazeer"})
+// const addTwo = (num1, num2) => ({username: "Nazeer"})
 
 console.log(addTwo(3, 5)); // 8

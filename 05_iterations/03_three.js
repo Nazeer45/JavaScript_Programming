@@ -19,10 +19,12 @@ myMap.set("name", "Nazeer")
 myMap.set("age", 22)
 myMap.set("IN", "India")
 
-// console.log(myMap);
+// console.log(myMap); // Map(3) { 'name' => 'Nazeer', 'age' => 22, 'IN' => 'India' }
 
 for (const [key, value] of myMap) {
-    // console.log(key, ':-', value)
+    // console.log(key, ':-', value) //name :- Nazeer
+                                  //age :- 22
+                                  //IN :- India
 }
 
 //Object

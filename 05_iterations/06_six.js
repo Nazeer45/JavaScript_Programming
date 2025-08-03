@@ -24,5 +24,12 @@ const books = [
 ];
 
 let userBooks = books.filter((bk)=> bk.genre === 'Non-Fiction')
-userBooks = books.filter((bk)=> {return bk.publish >= 2010})
-console.log(userBooks);
+// console.log(userBooks); // [ { title: 'Book 4', genre: 'Non-Fiction', publish: 2020 } ]
+
+let userBooks1 = books.filter((bk)=> {return bk.publish >= 2010})
+// console.log(userBooks1); // [
+                        //   { title: 'Book 3', genre: 'Science', publish: 2010 },
+                        //   { title: 'Book 4', genre: 'Non-Fiction', publish: 2020 },
+                        //   { title: 'Book 5', genre: 'Social', publish: 2030 },
+                        //   { title: 'Book 6', genre: 'Biography', publish: 2040 }
+                        // ]

@@ -1,6 +1,6 @@
 // reduce method - applies a function to an array and returns a single value
 
-// For first iteration initial value is assigned to acc and currval is assigned from the first element of the array
+// For first iteration initial value is assigned to accumulator (acc) and currval is assigned from the first element of the array
 
 const myNums = [1,2,3]
 
