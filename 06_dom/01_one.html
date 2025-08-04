@@ -32,26 +32,25 @@
 <!-- 
 document.getElementById("title") // <h1 id="title" class="heading">DOM learning on Chai aur Code</h1>  
 
-document.getElementsById("title").id // 'title'
 
 document.getElementsByClass // returns 'undefined' as javascript doesnt support class instead it supports classname
 
 document.getElementsByClassName // 'heading'
 
-document.getElementsById('title').getAttribute('id') // 'title'
+document.getElementById('title').getAttribute('id') // 'title'
 
-document.getElementsById('title').getAttribute('class') // 'heading'
+document.getElementById('title').getAttribute('class') // 'heading'
 
-document.getElementsById('title').setAttribute('class','test') // it will overwrite the class attribute to test
+document.getElementById('title').setAttribute('class','test') // it will overwrite the class attribute to test
 
-const tile = document.getElementsById('title')
+const title = document.getElementById('title')
 title.style.backgroundColor = 'yellow'
 
-title.innerText = "DOM learning on Chai aur Code" // gets only visible text
+title.innerText // "DOM learning on Chai aur Code" // gets only visible text and does not show hidden text
 
-title.textContent = "DOM learning on Chai aur Code by Nazeer Shaik" // gets all the text even hidden
+title.textContent // "DOM learning on Chai aur Code by Nazeer Shaik" // gets all the text even hidden
 
-title.innerHTML = "DOM learning on Chai aur Code <span style='display: none;'>by Nazeer Shaik</span>" // gets raw html
+title.innerHTML // "DOM learning on Chai aur Code <span style='display: none;'>by Nazeer Shaik</span>" // gets raw html code
 
 document.querySelector('h2') // returns only first h2
 
@@ -63,7 +62,7 @@ document.querySelector('.heading') // using class
 
 document.querySelector('input[type="password"]') // using input type
 
-const tempClassList = document.getElementsByClassName('list-item') // returns HTMLCollection, so direct manipulation is not possible, we need to convert it to array
+const tempClassList = document.getElementByClassName('list-item') // returns HTMLCollection, so direct manipulation is not possible, we need to convert it to array
 
 const myConvertedArray = Array.from(tempClassList) // converting HTMLCollection to array
 
@@ -73,5 +72,5 @@ myConvertedArray.forEach((item) => {
 
 const allH2 = document.querySelectorAll('h2') // returns NodeList, forEach is possible, but other direct manipulation not possible, we need to convert it to array
 
-
+const listArray = Array.from(allH2)
 -->
