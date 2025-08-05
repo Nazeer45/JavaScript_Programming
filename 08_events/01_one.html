@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1>Html Events</h1>
+    <ul id="images">
+        <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><a style= "color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // onclick in html tag can be used to add events to html elements, but it is not recommended
+    // onclick can also be implemented using function but it is not recommended
+    //Ex of onclick using function
+    //document.getElementById('prayer').onclick = function(){
+    //    alert('Image is clicked');
+    //}
+
+    // better way to add events using addEventListener
+    // document.getElementById('prayer').addEventListener('click', function(){
+    //     alert('Image is clicked');
+    // }, false);
+
+    // different types of events
+    // click, mouseover, mouseout, mousemove, keypress, keydown, keyup
+
+    // document.getElementById('prayer').// addEventListener('click', function(e){
+    //     console.log(e);
+    //     e.stopPropagation(); // stops the event from bubbling up to the parent element
+    // }, true);
+    
+    // different values for addEventListener
+    // type, timestamp, defaultPrevented, target, toElement, currentTarget, srcElement
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, KeyCode
+
+    // capturing and bubbling(default)
+    // true - capturing, false - bubbling
+    // in addEventListener, true means capturing, that is events are added first to the parent element and then to the child element.
+    // false means bubbling, that is events are added first to the child element and then to the parent element
+
+    // e.stopPropagation(); // stops the event from bubbling up to the parent element
+
+    // document.getElementById('google').// addEventListener('click', function(e){
+    //     e.prevent(); // prevents the default action of the event
+    //     alert('Google is clicked');
+    // })
+
+    // to remove image after click using Event Listener
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        e.preventDefault();
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            // removeIt.remove(); // one way of     removing
+            removeIt.parentNode.removeChild (removeIt);
+        }
+    })
+
+</script>
+</html>
