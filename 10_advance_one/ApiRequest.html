@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl); // this method is used to open the request
+
+    xhr.onreadystatechange = function () { // this method is used to continuously check the state of the request
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) { // 4 means the request is completed and response is ready
+            const data = JSON.parse(this.responseText);
+            console.log(data.followers);
+        }
+    }
+    xhr.send(); // this method is used to send the request
+</script>
+</html>
