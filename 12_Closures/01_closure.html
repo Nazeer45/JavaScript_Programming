@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body>
+    <button id="orange" style="background-color: orange;">Orange</button>
+    <button id="green" style="background-color: green;">Green</button>
+</body>
+<script>
+    // lexical scope
+    function outer(){
+        let username = "nazeer";
+        // console.log("outer", secret); // undefined - cannot access inner scope variable from outer
+        function inner(){
+            let secret = "my123";
+            console.log("inner", username); // nazeer - can access inner scope variable from outer
+        }
+        inner();
+    }
+    // console.log(username); // undefined - not accessible outside
+    //outer();
+
+
+    // closures
+    function counter(){
+        let count = 0;
+        function increment(){
+            count++;
+            return count;
+        }
+        return increment;
+    }
+    const increment = counter();
+    console.log(increment()); // 1
+    console.log(increment()); // 2
+    console.log(increment()); // 3
+    console.log(increment()); // 4
+
+    
+    // Another example of closure
+    function clickHandler(color){
+        return function(){
+            document.body.style.backgroundColor = color;
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler('orange');
+    document.getElementById('green').onclick = clickHandler('green');
+    
+</script>
+</html>
